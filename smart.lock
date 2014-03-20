@@ -1,0 +1,33 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "googlemaps": {},
+      "geohash": {},
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-dropdown": {}
+    },
+    "packages": {
+      "googlemaps": {
+        "git": "https://github.com/drewjw81/meteor-googlemaps.git",
+        "tag": "v0.0.2",
+        "commit": "da8785c82cfd7de0111f898ef10728e7ed24e361"
+      },
+      "geohash": {
+        "git": "https://github.com/grigio/meteor-geohash.git",
+        "tag": "v0.0.5",
+        "commit": "b92a6a4ca19d9f5b5270e22283e7f13bd01fb771"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "accounts-ui-bootstrap-dropdown": {
+        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
+        "tag": "v0.6.5.1",
+        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+      }
+    }
+  }
+}

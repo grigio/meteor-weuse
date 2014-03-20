@@ -1,0 +1,39 @@
+<template name="usersList">
+
+  <p style="margin-top:290px;">
+    {{#if selectedGeohash }}
+      <h3>Users from: <span class="js-unset-geohash label label-primary">{{selectedGeohash}} &times;</span>
+        {{#if isUserInThisGeohash}}          
+          <a type="button" class="js-unset-user-geohash active btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-star"></span> You from here</a>
+        {{ else }}
+          <a type="button" class="js-set-user-geohash btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-star"></span> Set me here</a>
+        {{/if}}
+      </h3>
+    {{else}}
+    <div class="alert alert-info">
+      <h4>Where people use Meteor?</h4>
+      <p>
+        Zoom and click to find your geohash area or click on an existing one.
+      </p>
+    </div>
+    <h3>Latest users</h3>
+    {{/if}}
+  </p>
+
+
+  {{#each allUsers}}
+    <div class="media">
+      <div class="pull-left" href="#">
+        <img src="{{ profile.avatar_url }}" style="width: 64px; height: 64px;">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ profile.name }} (<a href="{{profile.html_url}}">
+          {{ profile.login }}</a>)</h4>
+        <p><span class="js-set-geohash label label-primary" data-geohash="{{profile.geohash}}">{{profile.geohash}}</span> - {{profile.location}}</p>
+      </div>
+    </div>
+    {{else}}
+    <p style="font-size:20px;margin-top:30px;">There are no user in this area, wanna be the first? <i class="glyphicon glyphicon-hand-up"></i></p>
+  {{/each}}
+
+</template>
