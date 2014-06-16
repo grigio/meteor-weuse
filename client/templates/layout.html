@@ -7,11 +7,16 @@
 </head>
 
 <body>
+</body>
+
+
+<template name='layout'>
+  <!-- layout -->
   <div class="container">
     {{> header }}
-    {{> usersList }}
+    {{> yield }}
   <footer style="margin-top: 100px;margin-bottom:10px;">
     Built <i class="glyphicon glyphicon-cog"></i> in Torino by <a href="http://grigio.org">Luigi Maselli</a> - Code on <a href="https://github.com/grigio/meteor-weuse">Github</a>.
   </footer>
   </div>
-</body>
+</template>

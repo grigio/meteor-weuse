@@ -4,6 +4,8 @@
     "geohash": {},
     "bootstrap-3": {},
     "accounts-ui-bootstrap-dropdown": {},
-    "GAnalytics": {}
+    "GAnalytics": {},
+    "iron-router": {},
+    "fast-render": {}
   }
 }

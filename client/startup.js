@@ -1,5 +1,34 @@
-Meteor.startup(function () {
-  GAnalytics.pageview();
+Router.map(function() {
+
+  this.route('home', {
+    path: '/',
+    layoutTemplate: 'layout',
+    template:'usersList',
+    waitOn: function () {
+      return Meteor.subscribe('allUsers');
+    },
+
+    data: function() {
+      return Meteor.users.find();
+    },
+    
+    fastRender: true,
+
+    action: function () {
+      if (this.ready()) {
+        GAnalytics.pageview('/');
+        $('.loading').hide();
+        this.render();
+      } else {
+        $('.loading').show();
+        // this.render('loading');
+      } 
+    }
+
+  });
+}); // router
+
+initGMaps = function initGMaps() {
   // default values
   Session.setDefault('explore-mode', true);
 
@@ -18,7 +47,7 @@ Meteor.startup(function () {
           };
           map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
           map.setCenter(new google.maps.LatLng( 44.409689,8.353029 ));
-          Session.set('mapsLoaded', true);
+          Session.set('mapLoaded', 'yes');
 
           markers = [];
 
@@ -115,4 +144,4 @@ Meteor.startup(function () {
       }
   ); // end GMaps init
 
-});
+};
