@@ -5,7 +5,8 @@
       "googlemaps": {},
       "geohash": {},
       "bootstrap-3": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "accounts-ui-bootstrap-dropdown": {},
+      "GAnalytics": {}
     },
     "packages": {
       "googlemaps": {
@@ -25,8 +26,13 @@
       },
       "accounts-ui-bootstrap-dropdown": {
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.6.5.1",
-        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+        "tag": "v0.8.3",
+        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
+      },
+      "GAnalytics": {
+        "git": "https://github.com/datariot/meteor-ganalytics.git",
+        "tag": "v0.1.1",
+        "commit": "91b19d37687bb2cd7976fb43b482143a53509d7e"
       }
     }
   }

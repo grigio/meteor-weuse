@@ -7,7 +7,8 @@ Meteor.publish("allUsers", function (opts) {
     updatedAt:1
   };
   // userFields = {}
-  var res = Meteor.users.find( search ,{fields: userFields, sort:{updatedAt:-1} } );
+  // var res = Meteor.users.find( search ,{fields: userFields, sort:{updatedAt:-1} } );
+  var res = Meteor.users.find( search ,{fields: userFields } );
 
   return res;
 });

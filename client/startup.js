@@ -1,4 +1,5 @@
 Meteor.startup(function () {
+  GAnalytics.pageview();
   // default values
   Session.setDefault('explore-mode', true);
 
